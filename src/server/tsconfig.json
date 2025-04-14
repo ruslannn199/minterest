@@ -1,0 +1,20 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "outDir": "./build",
+    "sourceMap": false,
+    "noEmit": false,
+    "strict": true,
+    "baseUrl": "./",
+    "rootDir": "./",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "resolveJsonModule": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "build"]
+}

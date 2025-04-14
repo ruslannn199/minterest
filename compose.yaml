@@ -1,0 +1,28 @@
+services:
+  postgres:
+    container_name: postgres_ex15
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=rootUser
+      - POSTGRES_PASSWORD=somePwd
+      - POSTGRES_DB=minterest
+    ports:
+      - "5555:5555"
+    restart: always
+    volumes:
+      - data:/var/lib/postgresql/data
+    command: -p 5555
+
+  pgadmin:
+    container_name: minterest_admin
+    image: dpage/pgadmin4:latest
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@pgadmin.com
+      - PGADMIN_DEFAULT_PASSWORD=wlad2dads
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
+
+volumes:
+  data:

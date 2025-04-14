@@ -1,0 +1,43 @@
+{
+  "name": "minterest",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "preinstall": "npx only-allow pnpm",
+    "server:dev": "tsx watch ./src/server/app.ts"
+  },
+  "dependencies": {
+    "@ant-design/icons": "5.x",
+    "@ant-design/nextjs-registry": "1.0.2",
+    "@ant-design/v5-patch-for-react-19": "1.0.3",
+    "antd": "5.24.5",
+    "body-parser": "2.1.0",
+    "cors": "2.8.5",
+    "dayjs": "1.11.13",
+    "debounce": "^2.2.0",
+    "express": "5.0.1",
+    "next": "15.2.4",
+    "normalize.css": "8.0.1",
+    "pg": "8.14.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3",
+    "@types/body-parser": "1.19.5",
+    "@types/cors": "2.8.17",
+    "@types/express": "5.0.1",
+    "@types/node": "20",
+    "@types/pg": "8.11.11",
+    "@types/react": "19",
+    "@types/react-dom": "19",
+    "eslint": "9",
+    "eslint-config-next": "15.2.4",
+    "tsx": "4.19.3",
+    "typescript": "5"
+  }
+}
