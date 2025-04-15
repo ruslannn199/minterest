@@ -6,3 +6,4 @@ export * from "./RemoveImageButton";
 export * from "./SearchInput";
 export * from "./TagFilter";
 export * from "./Order";
+export * from "./LoadMore";

@@ -4,8 +4,7 @@ import { IImage, PaginatedResponse } from "@/server/types";
 import { request } from "@/utils";
 
 type Params = {
-  limit?: `${number}`;
-  offset?: `${number}`;
+  page?: `${number}`;
   filter?: string[] | string;
   sort?: "asc" | "desc";
   q?: string;
@@ -22,7 +21,9 @@ const getFilter = (filter: string | string[] | null | undefined): string => {
 };
 
 export const getImagesAction = async (params?: Params) => {
-  const { limit = "12", offset = "0", filter, sort, q } = params ?? {};
+  const { page = "1", filter, sort, q } = params ?? {};
+  const limit = `${12 * parseInt(page, 10)}`;
+  const offset = "0";
 
   const response = await request(
     `images?${new URLSearchParams({

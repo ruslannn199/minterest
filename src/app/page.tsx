@@ -1,5 +1,5 @@
 import { getImagesAction } from '@/actions';
-import { ImageCard, Order, SearchInput, TagFilter } from '@/components';
+import { ImageCard, LoadMore, Order, SearchInput, TagFilter } from '@/components';
 import { Col, Flex, Row } from 'antd';
 
 type Props = {
@@ -22,6 +22,7 @@ export default async function Home({ searchParams }: Props) {
           <Col key={index} span={6}><ImageCard image={image} /></Col>
         ))}
       </Row>
+      {result.paging.total > result.items.length && <LoadMore />}
     </Flex>
   );
 }
