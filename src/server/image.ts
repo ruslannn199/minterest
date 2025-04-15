@@ -90,12 +90,28 @@ export class ImageController {
 
   public static update: RequestHandler = async (req, res) => {
     const { id } = req.params;
-    const { tags = [] } = req.body;
+    const { tags = [], name } = req.body;
 
-    await query(`UPDATE images SET tags = $1 WHERE id = $2`, [
-      Array.isArray(tags) ? tags : [tags],
-      id,
-    ]);
+    let updateQuery = "";
+
+    if (name) {
+      updateQuery += "name = $2";
+    }
+
+    if (tags) {
+      if (name) {
+        updateQuery += ", tags = $3";
+      } else {
+        updateQuery += "tags = $2";
+      }
+    }
+
+    await query(
+      `UPDATE images SET ${updateQuery} WHERE id = $1`,
+      [id, name, Array.isArray(tags) ? tags : [tags]].filter(
+        (el) => el !== undefined
+      )
+    );
 
     res.status(200).send();
   };

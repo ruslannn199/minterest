@@ -10,7 +10,7 @@ import {
   type UploadFile,
   Button,
   Tag,
-  InputRef,
+  Image,
 } from "antd";
 import FormItem from "antd/es/form/FormItem";
 import React, { FC, useEffect, useRef, useState } from "react";
@@ -23,8 +23,8 @@ type Props = {
 export const ImageForm: FC<Props> = ({ id, initialValues }: Props) => {
   const [form] = Form.useForm();
   const [file, setFile] = useState<UploadFile | null>(null);
-  const [tags, setTags] = useState<string[]>([]);
-  const [inputValue, setInputValue] = useState('');
+  const [tags, setTags] = useState<string[]>(initialValues?.tags ?? []);
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     const handleBeforeUnload = async () => {
@@ -37,21 +37,19 @@ export const ImageForm: FC<Props> = ({ id, initialValues }: Props) => {
   }, []);
 
   const handleTagInputConfirm = () => {
-    if (tags.includes(inputValue) || inputValue === '') {
+    if (tags.includes(inputValue) || inputValue === "") {
       return;
     }
 
     setTags([...tags, inputValue]);
-    setInputValue('');
+    setInputValue("");
   };
 
   const handleSubmit = async (values: Pick<IImage, "name">) => {
-    if (!file || !file.name) {
-      return;
+    if (id || (file?.name)) {
+      await saveImageAction({ ...values, tags, url: (file?.name || initialValues?.url) as string, id });
     }
-
-    await saveImageAction({ ...values, tags, url: file.name });
-  }
+  };
 
   return (
     <div
@@ -65,7 +63,7 @@ export const ImageForm: FC<Props> = ({ id, initialValues }: Props) => {
       <Form
         layout="vertical"
         form={form}
-        initialValues={{ name: initialValues?.name, tags: initialValues?.tags }}
+        initialValues={{ name: initialValues?.name }}
         onFinish={handleSubmit}
       >
         <FormItem
@@ -101,50 +99,54 @@ export const ImageForm: FC<Props> = ({ id, initialValues }: Props) => {
             value={inputValue}
           />
         </FormItem>
-        <Upload
-          name="image"
-          accept="image/*"
-          listType="picture-card"
-          action="http://localhost:8000/upload"
-          maxCount={1}
-          onChange={async (info) => {
-            if (info.file.status === "done") {
-              setFile({
-                ...info.file,
-                name: info.file.response?.filename ?? info.file.name,
-              });
-            } else {
-              setFile(null);
-            }
-          }}
-          onRemove={async () => {
-            if (file?.name) {
-              await removeImageUploadAction(file.name);
-            }
-          }}
-        >
-          <button
-            type="button"
-            style={{
-              border: 0,
-              background: "none",
-              cursor: "pointer",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 4,
+        {id ? (
+          <Image src={`/uploads/${initialValues?.url}`} alt={initialValues?.name} />
+        ) : (
+          <Upload
+            name="image"
+            accept="image/*"
+            listType="picture-card"
+            action="http://localhost:8000/upload"
+            maxCount={1}
+            onChange={async (info) => {
+              if (info.file.status === "done") {
+                setFile({
+                  ...info.file,
+                  name: info.file.response?.filename ?? info.file.name,
+                });
+              } else {
+                setFile(null);
+              }
+            }}
+            onRemove={async () => {
+              if (file?.name) {
+                await removeImageUploadAction(file.name);
+              }
             }}
           >
-            <PlusOutlined />
-            Загрузить
-          </button>
-        </Upload>
+            <button
+              type="button"
+              style={{
+                border: 0,
+                background: "none",
+                cursor: "pointer",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              <PlusOutlined />
+              Загрузить
+            </button>
+          </Upload>
+        )}
         <Button
           type="primary"
           htmlType="submit"
           style={{ marginTop: 16 }}
-          disabled={file === null}
+          disabled={file === null && !id}
         >
           Сохранить
         </Button>

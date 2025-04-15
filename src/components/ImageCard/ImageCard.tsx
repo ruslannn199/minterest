@@ -35,7 +35,7 @@ export const ImageCard: FC<Props> = ({ image }) => {
         </>
       )}
       <Flex style={{ marginTop: 8, width: '100%' }} justify='space-between'>
-        <Link href={`images/${url}`}><Button icon={<EditFilled />} /></Link>
+        <Link href={`images/${id}`}><Button icon={<EditFilled />} /></Link>
         <RemoveImageButton id={id} url={url} />
       </Flex>
     </Card>
