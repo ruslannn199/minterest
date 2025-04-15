@@ -36,21 +36,19 @@ export class ImageController {
     const { limit = "0", offset = "10", filter, q, sort = "asc" } = req.query;
     const tags = Array.isArray(filter) ? filter : [filter];
 
+    const values = [limit, offset, q ? `%${q}%` : q, tags].filter(
+      removeNonStringOrNonStringArrayValues
+    );
+
     const items = await query<IImage>(
       `
       SELECT * FROM images${getFiltersString(
         q as string,
         tags as string[],
-        4
-      )} ORDER BY $3 LIMIT $1 OFFSET $2
+        3
+      )} ORDER BY created ${(sort as string).toUpperCase()} LIMIT $1 OFFSET $2
       `,
-      [
-        limit,
-        offset,
-        sort === "asc" ? "created" : "created DESC",
-        q ? `%${q}%` : q,
-        tags,
-      ].filter(removeNonStringOrNonStringArrayValues)
+      values
     );
 
     const total = await getTableTotal(
