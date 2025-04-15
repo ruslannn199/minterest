@@ -35,6 +35,9 @@ importers:
       express:
         specifier: 5.0.1
         version: 5.0.1
+      multer:
+        specifier: 1.4.5-lts.2
+        version: 1.4.5-lts.2
       next:
         specifier: 15.2.4
         version: 15.2.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -63,6 +66,9 @@ importers:
       '@types/express':
         specifier: 5.0.1
         version: 5.0.1
+      '@types/multer':
+        specifier: ^1.4.12
+        version: 1.4.12
       '@types/node':
         specifier: '20'
         version: 20.17.27
@@ -662,6 +668,9 @@ packages:
   '@types/mime@1.3.5':
     resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==, tarball: https://npm.yandex-team.ru/@types%2fmime/-/mime-1.3.5.tgz?rbtorrent=cd6bfc1757dcd95470935939ff4acaf11aab9b4e}
 
+  '@types/multer@1.4.12':
+    resolution: {integrity: sha512-pQ2hoqvXiJt2FP9WQVLPRO+AmiIm/ZYkavPlIQnx282u4ZrVdztx0pkh3jjpQt0Kz+YI0YhSG264y08UJKoUQg==, tarball: https://npm.yandex-team.ru/@types%2fmulter/-/multer-1.4.12.tgz?rbtorrent=}
+
   '@types/node@20.17.27':
     resolution: {integrity: sha512-U58sbKhDrthHlxHRJw7ZLiLDZGmAUOZUbpw0S6nL27sYUdhvgBLCRu/keSd6qcTsfArd1sRFCCBxzWATGr/0UA==, tarball: https://npm.yandex-team.ru/@types%2fnode/-/node-20.17.27.tgz?rbtorrent=}
 
@@ -821,6 +830,9 @@ packages:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
 
+  append-field@1.0.0:
+    resolution: {integrity: sha1-HjRA6RXwsSA9I3SOeO3XubW0PlY=, tarball: https://npm.yandex-team.ru/append-field/-/append-field-1.0.0.tgz?rbtorrent=5112e749b74963f44fac2a72eb857381f85c712b}
+
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==, tarball: https://npm.yandex-team.ru/argparse/-/argparse-2.0.1.tgz?rbtorrent=196f5093a380b90b5951b3beaf696d4e000de4cc}
 
@@ -896,6 +908,9 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==, tarball: https://npm.yandex-team.ru/braces/-/braces-3.0.3.tgz?rbtorrent=}
     engines: {node: '>=8'}
 
+  buffer-from@1.1.2:
+    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==, tarball: https://npm.yandex-team.ru/buffer-from/-/buffer-from-1.1.2.tgz?rbtorrent=2ab7cd44279a22ccba6d127a4cf91805f5369ff3}
+
   busboy@1.6.0:
     resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==, tarball: https://npm.yandex-team.ru/busboy/-/busboy-1.6.0.tgz?rbtorrent=89aacf5c1963d07bbc1c593028093db5af959928}
     engines: {node: '>=10.16.0'}
@@ -953,6 +968,10 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=, tarball: https://npm.yandex-team.ru/concat-map/-/concat-map-0.0.1.tgz?rbtorrent=d68e847684dabaf80403d1a017a6f3fe9f55e5f6}
 
+  concat-stream@1.6.2:
+    resolution: {integrity: sha512-27HBghJxjiZtIk3Ycvn/4kbJk/1uZuJFfuPEns6LaEvpvG1f0hTea8lilrouyo9mVc2GWdcEZ8OLoGmSADlrCw==, tarball: https://npm.yandex-team.ru/concat-stream/-/concat-stream-1.6.2.tgz?rbtorrent=a65ae55b4f82c5f3d8047a242c8913ea21341085}
+    engines: {'0': node >= 0.8}
+
   content-disposition@1.0.0:
     resolution: {integrity: sha512-Au9nRL8VNUut/XSzbQA38+M78dzP4D+eqg3gfJHMIHHYa3bg067xj1KxMUWj+VULbiZMowKngFFbKczUrNJ1mg==, tarball: https://npm.yandex-team.ru/content-disposition/-/content-disposition-1.0.0.tgz?rbtorrent=}
     engines: {node: '>= 0.6'}
@@ -971,6 +990,9 @@ packages:
 
   copy-to-clipboard@3.3.3:
     resolution: {integrity: sha512-2KV8NhB5JqC3ky0r9PMCAZKbUHSwtEo4CwCs0KXgruG43gX5PMqDEBbVU4OUzw2MuAWUfsuFmWvEKG5QRfSnJA==, tarball: https://npm.yandex-team.ru/copy-to-clipboard/-/copy-to-clipboard-3.3.3.tgz?rbtorrent=e0689f6a9717b04991b84fc1d52e609921655e94}
+
+  core-util-is@1.0.3:
+    resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==, tarball: https://npm.yandex-team.ru/core-util-is/-/core-util-is-1.0.3.tgz?rbtorrent=d27ee558e50b9ed57445f731d176aea0c42859fd}
 
   cors@2.8.5:
     resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==, tarball: https://npm.yandex-team.ru/cors/-/cors-2.8.5.tgz?rbtorrent=2bacc3b72e438b140fb4a1ab69013c2664e2898f}
@@ -1527,6 +1549,9 @@ packages:
     resolution: {integrity: sha512-mfcwb6IzQyOKTs84CQMrOwW4gQcaTOAWJ0zzJCl2WSPDrWk/OzDaImWFH3djXhb24g4eudZfLRozAvPGw4d9hQ==, tarball: https://npm.yandex-team.ru/is-weakset/-/is-weakset-2.0.4.tgz?rbtorrent=}
     engines: {node: '>= 0.4'}
 
+  isarray@1.0.0:
+    resolution: {integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=, tarball: https://npm.yandex-team.ru/isarray/-/isarray-1.0.0.tgz?rbtorrent=83dabca8b41690244744fa59215842863fc7cdd0}
+
   isarray@2.0.5:
     resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==, tarball: https://npm.yandex-team.ru/isarray/-/isarray-2.0.5.tgz?rbtorrent=543db49a37a8d09cddab2deba3bcea79bb810141}
 
@@ -1593,6 +1618,10 @@ packages:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==, tarball: https://npm.yandex-team.ru/math-intrinsics/-/math-intrinsics-1.1.0.tgz?rbtorrent=}
     engines: {node: '>= 0.4'}
 
+  media-typer@0.3.0:
+    resolution: {integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=, tarball: https://npm.yandex-team.ru/media-typer/-/media-typer-0.3.0.tgz?rbtorrent=9b7ee58e7e88a03f8f10c81220d0de520b216f82}
+    engines: {node: '>= 0.6'}
+
   media-typer@1.1.0:
     resolution: {integrity: sha512-aisnrDP4GNe06UcKFnV5bfMNPBUw4jsLGaWwWfnH3v02GnBuXX2MCVn5RbrWo0j3pczUilYblq7fQ7Nw2t5XKw==, tarball: https://npm.yandex-team.ru/media-typer/-/media-typer-1.1.0.tgz?rbtorrent=a5e00df29c1ab6a334904dda7e56f24a21428157}
     engines: {node: '>= 0.8'}
@@ -1639,11 +1668,19 @@ packages:
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==, tarball: https://npm.yandex-team.ru/minimist/-/minimist-1.2.8.tgz?rbtorrent=37c3ed4ebd14901a5c1e7666131bdfedac287a16}
 
+  mkdirp@0.5.6:
+    resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==, tarball: https://npm.yandex-team.ru/mkdirp/-/mkdirp-0.5.6.tgz?rbtorrent=79930ac902be912db6604b783c28aeb764ac5e92}
+    hasBin: true
+
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==, tarball: https://npm.yandex-team.ru/ms/-/ms-2.1.2.tgz?rbtorrent=269d2b1e4b633a2572e485adbd93b4085872ffe0}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==, tarball: https://npm.yandex-team.ru/ms/-/ms-2.1.3.tgz?rbtorrent=c0db1b8d3743f39d06054864041516e9b7ac9a4c}
+
+  multer@1.4.5-lts.2:
+    resolution: {integrity: sha512-VzGiVigcG9zUAoCNU+xShztrlr1auZOlurXynNvO9GiWD1/mTBbUljOKY+qMeazBqXgRnjzeEgJI/wyjJUHg9A==, tarball: https://npm.yandex-team.ru/multer/-/multer-1.4.5-lts.2.tgz?rbtorrent=}
+    engines: {node: '>= 6.0.0'}
 
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==, tarball: https://npm.yandex-team.ru/nanoid/-/nanoid-3.3.11.tgz?rbtorrent=}
@@ -1861,6 +1898,9 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==, tarball: https://npm.yandex-team.ru/prelude-ls/-/prelude-ls-1.2.1.tgz?rbtorrent=815ffef0632e1a23540119e535e2e0e82f8a184d}
     engines: {node: '>= 0.8.0'}
+
+  process-nextick-args@2.0.1:
+    resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==, tarball: https://npm.yandex-team.ru/process-nextick-args/-/process-nextick-args-2.0.1.tgz?rbtorrent=7a84ce01bdc2c09524155240448d145a2305acc9}
 
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==, tarball: https://npm.yandex-team.ru/prop-types/-/prop-types-15.8.1.tgz?rbtorrent=dfd09c705f4836bb67b68ecda9c1bf1b8073d078}
@@ -2135,6 +2175,9 @@ packages:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==, tarball: https://npm.yandex-team.ru/react/-/react-19.0.0.tgz?rbtorrent=}
     engines: {node: '>=0.10.0'}
 
+  readable-stream@2.3.8:
+    resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==, tarball: https://npm.yandex-team.ru/readable-stream/-/readable-stream-2.3.8.tgz?rbtorrent=1b091699aae718c522b6851f8157091cd735489a}
+
   reflect.getprototypeof@1.0.10:
     resolution: {integrity: sha512-00o4I+DVrefhv+nX0ulyi3biSHCPDe+yLv5o/p6d/UVlirijB8E16FtfwSAi4g3tcqrQ4lRAqQSoFEZJehYEcw==, tarball: https://npm.yandex-team.ru/reflect.getprototypeof/-/reflect.getprototypeof-1.0.10.tgz?rbtorrent=}
     engines: {node: '>= 0.4'}
@@ -2182,6 +2225,9 @@ packages:
   safe-array-concat@1.1.3:
     resolution: {integrity: sha512-AURm5f0jYEOydBj7VQlVvDrjeFgthDdEF5H1dP+6mNpoXOMo1quQqJ4wvJDyRZ9+pO3kGWoOdmV08cSv2aJV6Q==, tarball: https://npm.yandex-team.ru/safe-array-concat/-/safe-array-concat-1.1.3.tgz?rbtorrent=}
     engines: {node: '>=0.4'}
+
+  safe-buffer@5.1.2:
+    resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==, tarball: https://npm.yandex-team.ru/safe-buffer/-/safe-buffer-5.1.2.tgz?rbtorrent=919e175e4a456facb2f9db2e63065c31db36ac10}
 
   safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==, tarball: https://npm.yandex-team.ru/safe-buffer/-/safe-buffer-5.2.1.tgz?rbtorrent=e3149b0255bb4dc4e498c9b879904dfcfa607eba}
@@ -2311,6 +2357,9 @@ packages:
     resolution: {integrity: sha512-UXSH262CSZY1tfu3G3Secr6uGLCFVPMhIqHjlgCUtCCcgihYc/xKs9djMTMUOb2j1mVSeU8EU6NWc/iQKU6Gfg==, tarball: https://npm.yandex-team.ru/string.prototype.trimstart/-/string.prototype.trimstart-1.0.8.tgz?rbtorrent=}
     engines: {node: '>= 0.4'}
 
+  string_decoder@1.1.1:
+    resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==, tarball: https://npm.yandex-team.ru/string_decoder/-/string_decoder-1.1.1.tgz?rbtorrent=7ee5be81f884cbabbca9bd38518df624e2e1fe66}
+
   strip-bom@3.0.0:
     resolution: {integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=, tarball: https://npm.yandex-team.ru/strip-bom/-/strip-bom-3.0.0.tgz?rbtorrent=27f22454369e62f06ccc71c24666cb56502ac3f5}
     engines: {node: '>=4'}
@@ -2383,6 +2432,10 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==, tarball: https://npm.yandex-team.ru/type-check/-/type-check-0.4.0.tgz?rbtorrent=2c9ca61e1431737ce0cdb7ea5296ee7636773d89}
     engines: {node: '>= 0.8.0'}
 
+  type-is@1.6.18:
+    resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==, tarball: https://npm.yandex-team.ru/type-is/-/type-is-1.6.18.tgz?rbtorrent=38f82e5ad1ec85b7be95c74b669214119903c229}
+    engines: {node: '>= 0.6'}
+
   type-is@2.0.0:
     resolution: {integrity: sha512-gd0sGezQYCbWSbkZr75mln4YBidWUN60+devscpLF5mtRDUpiaTvKpBNrdaCvel1NdR2k6vclXybU5fBd2i+nw==, tarball: https://npm.yandex-team.ru/type-is/-/type-is-2.0.0.tgz?rbtorrent=}
     engines: {node: '>= 0.6'}
@@ -2403,6 +2456,9 @@ packages:
     resolution: {integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==, tarball: https://npm.yandex-team.ru/typed-array-length/-/typed-array-length-1.0.7.tgz?rbtorrent=}
     engines: {node: '>= 0.4'}
 
+  typedarray@0.0.6:
+    resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=, tarball: https://npm.yandex-team.ru/typedarray/-/typedarray-0.0.6.tgz?rbtorrent=c965446ff13c7d499b5d07163eaaa47532feae57}
+
   typescript@5.8.2:
     resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==, tarball: https://npm.yandex-team.ru/typescript/-/typescript-5.8.2.tgz?rbtorrent=}
     engines: {node: '>=14.17'}
@@ -2421,6 +2477,9 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==, tarball: https://npm.yandex-team.ru/uri-js/-/uri-js-4.4.1.tgz?rbtorrent=da8316eab7bedb987c6087fad2c8e1a51ff339fb}
+
+  util-deprecate@1.0.2:
+    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=, tarball: https://npm.yandex-team.ru/util-deprecate/-/util-deprecate-1.0.2.tgz?rbtorrent=b85aab19594c8c7603748f9711f19ed8a128ae74}
 
   utils-merge@1.0.1:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=, tarball: https://npm.yandex-team.ru/utils-merge/-/utils-merge-1.0.1.tgz?rbtorrent=faf6dd3c1b1134732f4eefafe0ef8dae1593efcf}
@@ -2933,6 +2992,10 @@ snapshots:
 
   '@types/mime@1.3.5': {}
 
+  '@types/multer@1.4.12':
+    dependencies:
+      '@types/express': 5.0.1
+
   '@types/node@20.17.27':
     dependencies:
       undici-types: 6.19.8
@@ -3158,6 +3221,8 @@ snapshots:
       - luxon
       - moment
 
+  append-field@1.0.0: {}
+
   argparse@2.0.1: {}
 
   aria-query@5.3.2: {}
@@ -3268,6 +3333,8 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
+  buffer-from@1.1.2: {}
+
   busboy@1.6.0:
     dependencies:
       streamsearch: 1.1.0
@@ -3326,6 +3393,13 @@ snapshots:
 
   concat-map@0.0.1: {}
 
+  concat-stream@1.6.2:
+    dependencies:
+      buffer-from: 1.1.2
+      inherits: 2.0.4
+      readable-stream: 2.3.8
+      typedarray: 0.0.6
+
   content-disposition@1.0.0:
     dependencies:
       safe-buffer: 5.2.1
@@ -3339,6 +3413,8 @@ snapshots:
   copy-to-clipboard@3.3.3:
     dependencies:
       toggle-selection: 1.0.6
+
+  core-util-is@1.0.3: {}
 
   cors@2.8.5:
     dependencies:
@@ -4095,6 +4171,8 @@ snapshots:
       call-bound: 1.0.4
       get-intrinsic: 1.3.0
 
+  isarray@1.0.0: {}
+
   isarray@2.0.5: {}
 
   isexe@2.0.0: {}
@@ -4162,6 +4240,8 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
+  media-typer@0.3.0: {}
+
   media-typer@1.1.0: {}
 
   merge-descriptors@2.0.0: {}
@@ -4197,9 +4277,23 @@ snapshots:
 
   minimist@1.2.8: {}
 
+  mkdirp@0.5.6:
+    dependencies:
+      minimist: 1.2.8
+
   ms@2.1.2: {}
 
   ms@2.1.3: {}
+
+  multer@1.4.5-lts.2:
+    dependencies:
+      append-field: 1.0.0
+      busboy: 1.6.0
+      concat-stream: 1.6.2
+      mkdirp: 0.5.6
+      object-assign: 4.1.1
+      type-is: 1.6.18
+      xtend: 4.0.2
 
   nanoid@3.3.11: {}
 
@@ -4407,6 +4501,8 @@ snapshots:
   postgres-range@1.1.4: {}
 
   prelude-ls@1.2.1: {}
+
+  process-nextick-args@2.0.1: {}
 
   prop-types@15.8.1:
     dependencies:
@@ -4770,6 +4866,16 @@ snapshots:
 
   react@19.0.0: {}
 
+  readable-stream@2.3.8:
+    dependencies:
+      core-util-is: 1.0.3
+      inherits: 2.0.4
+      isarray: 1.0.0
+      process-nextick-args: 2.0.1
+      safe-buffer: 5.1.2
+      string_decoder: 1.1.1
+      util-deprecate: 1.0.2
+
   reflect.getprototypeof@1.0.10:
     dependencies:
       call-bind: 1.0.8
@@ -4843,6 +4949,8 @@ snapshots:
       get-intrinsic: 1.3.0
       has-symbols: 1.1.0
       isarray: 2.0.5
+
+  safe-buffer@5.1.2: {}
 
   safe-buffer@5.2.1: {}
 
@@ -5047,6 +5155,10 @@ snapshots:
       define-properties: 1.2.1
       es-object-atoms: 1.1.1
 
+  string_decoder@1.1.1:
+    dependencies:
+      safe-buffer: 5.1.2
+
   strip-bom@3.0.0: {}
 
   strip-json-comments@3.1.1: {}
@@ -5103,6 +5215,11 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
+  type-is@1.6.18:
+    dependencies:
+      media-typer: 0.3.0
+      mime-types: 2.1.35
+
   type-is@2.0.0:
     dependencies:
       content-type: 1.0.5
@@ -5142,6 +5259,8 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
+  typedarray@0.0.6: {}
+
   typescript@5.8.2: {}
 
   unbox-primitive@1.1.0:
@@ -5158,6 +5277,8 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  util-deprecate@1.0.2: {}
 
   utils-merge@1.0.1: {}
 

@@ -85,7 +85,7 @@ export class ImageController {
       [name, url, Array.isArray(tags) ? tags : [tags]]
     );
 
-    res.status(201);
+    res.status(201).send();
   };
 
   public static update: RequestHandler = async (req, res) => {
@@ -97,7 +97,7 @@ export class ImageController {
       id,
     ]);
 
-    res.status(200);
+    res.status(200).send();
   };
 
   public static delete: RequestHandler = async (req, res) => {
@@ -105,6 +105,6 @@ export class ImageController {
 
     await query(`DELETE FROM images WHERE id = $1`, [id]);
 
-    res.status(200);
+    res.status(200).send();
   };
 }
