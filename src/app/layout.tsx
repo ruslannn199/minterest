@@ -5,7 +5,7 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "@ant-design/v5-patch-for-react-19";
 import { ConfigProvider, Logo } from "@/components";
 import { App, Button, Layout } from "antd";
-import { Header } from "antd/es/layout/layout";
+import { Content, Header } from "antd/es/layout/layout";
 import Link from "next/link";
 import { PlusOutlined } from "@ant-design/icons";
 
@@ -31,16 +31,18 @@ export default async function RootLayout({
         <AntdRegistry>
           <ConfigProvider>
             <App>
-              <Header>
-                <Logo />
-                <Link href="/upload">
-                  <Button>
-                    <PlusOutlined />
-                    Загрузить изображение
-                  </Button>
-                </Link>
-              </Header>
-              <Layout>{children}</Layout>
+              <Layout style={{ minHeight: '100svh' }}>
+                <Header style={{ display: "flex", justifyContent: "space-between" }}>
+                  <Logo />
+                  <Link href="/upload">
+                    <Button block>
+                      <PlusOutlined />
+                      Загрузить изображение
+                    </Button>
+                  </Link>
+                </Header>
+                <Content style={{ padding: '20px 48px' }}>{children}</Content>
+              </Layout>
             </App>
           </ConfigProvider>
         </AntdRegistry>

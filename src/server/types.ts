@@ -7,10 +7,10 @@ export type PaginatedResponse<T> = {
   };
 };
 
-export type Image = {
+export interface IImage {
   id: string;
   url: string;
   name: string;
   created: string;
   tags: string[];
-};
+}

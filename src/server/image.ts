@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
 import { query } from "./db";
-import { Image } from "./types";
+import { IImage } from "./types";
 import {
   checkIfArrayIsStringArray,
   getTableTotal,
@@ -36,7 +36,7 @@ export class ImageController {
     const { limit = "0", offset = "10", filter, q, sort = "asc" } = req.query;
     const tags = Array.isArray(filter) ? filter : [filter];
 
-    const items = await query<Image>(
+    const items = await query<IImage>(
       `
       SELECT * FROM images${getFiltersString(
         q as string,
@@ -71,7 +71,7 @@ export class ImageController {
 
   public static getById: RequestHandler = async (req, res) => {
     const { id } = req.params;
-    const items = await query<Image>(`SELECT * FROM images WHERE id = $1`, [
+    const items = await query<IImage>(`SELECT * FROM images WHERE id = $1`, [
       id,
     ]);
     res.status(200).json(items[0]);
