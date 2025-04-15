@@ -2,8 +2,8 @@
 
 import { request } from "@/utils";
 
-export const removeImageUploadAction = async (name: string) => {
-  await request(`upload/${name}`, {
+export const removeImageUploadAction = async (url: string) => {
+  await request(`upload/${url}`, {
     method: "DELETE",
   });
 };

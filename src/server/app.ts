@@ -46,11 +46,11 @@ const start = async () => {
     });
   });
 
-  app.delete("/upload/:name", (req, res) => {
+  app.delete("/upload/:name", async (req, res) => {
     const { name } = req.params;
     const uploadFile = join(uploadFolder, name);
     try {
-      fs.unlink(uploadFile);
+      await fs.unlink(uploadFile);
     } catch (err) {
       console.error(err);
     }

@@ -15,14 +15,14 @@ const getFiltersString = (
   let filters = "";
 
   if (name) {
-    filters += `WHERE name ILIKE $${increment}`;
+    filters += ` WHERE name ILIKE $${increment}`;
   }
 
   if (checkIfArrayIsStringArray(tags)) {
     if (name) {
       filters += ` AND tags && $${increment + 1}`;
     } else {
-      filters += `WHERE tags && $${increment}`;
+      filters += ` WHERE tags && $${increment}`;
     }
   }
 
@@ -42,7 +42,7 @@ export class ImageController {
         q as string,
         tags as string[],
         4
-      )} LIMIT $1 OFFSET $2 ORDER BY $3
+      )} ORDER BY $3 LIMIT $1 OFFSET $2
       `,
       [
         limit,
