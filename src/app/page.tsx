@@ -1,5 +1,5 @@
 import { getImagesAction } from '@/actions';
-import { ImageCard } from '@/components';
+import { ImageCard, SearchInput } from '@/components';
 import { Col, Flex, Row } from 'antd';
 
 type Props = {
@@ -13,7 +13,7 @@ export default async function Home({ searchParams }: Props) {
 
   return (
     <Flex vertical style={{ width: '100%' }} gap={32}>
-      <div />
+      <SearchInput />
       {result.items.length === 0 && <p style={{ textAlign: 'center', fontSize: 36 }}>Изображений не найдено</p>}
       <Row gutter={[16, 16]}>
         {result.items.map((image, index) => (

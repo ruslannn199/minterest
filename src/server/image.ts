@@ -48,7 +48,7 @@ export class ImageController {
         limit,
         offset,
         sort === "asc" ? "created" : "created DESC",
-        q,
+        q ? `%${q}%` : q,
         tags,
       ].filter(removeNonStringOrNonStringArrayValues)
     );
