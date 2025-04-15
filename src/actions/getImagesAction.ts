@@ -6,13 +6,23 @@ import { request } from "@/utils";
 type Params = {
   limit?: `${number}`;
   offset?: `${number}`;
-  filter?: string[];
+  filter?: string[] | string;
   sort?: "asc" | "desc";
   q?: string;
 };
 
+const getFilter = (filter: string | string[] | null | undefined): string => {
+  if (!filter) return "";
+
+  if (typeof filter === "string") {
+    return `&filter=${filter}`;
+  }
+
+  return filter.map((tag) => `&filter=${tag}`).join("");
+};
+
 export const getImagesAction = async (params?: Params) => {
-  const { limit = "10", offset = "0", filter, sort, q } = params ?? {};
+  const { limit = "12", offset = "0", filter, sort, q } = params ?? {};
 
   const response = await request(
     `images?${new URLSearchParams({
@@ -20,9 +30,7 @@ export const getImagesAction = async (params?: Params) => {
       offset,
       ...(sort && { sort }),
       ...(q && { q }),
-    }).toString()}${
-      filter && filter.length ? filter.map((tag) => `&filter=${tag}`) : ""
-    }`,
+    }).toString()}${getFilter(filter)}`,
     {
       method: "GET",
       headers: {

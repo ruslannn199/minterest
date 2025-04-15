@@ -4,3 +4,4 @@ export * from "./ImageForm";
 export * from "./ImageCard";
 export * from "./RemoveImageButton";
 export * from "./SearchInput";
+export * from "./TagFilter";
